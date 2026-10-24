@@ -1,38 +1,25 @@
-# IRCTC Hotel Booking – static site
+# Images to add
 
-Plain HTML + CSS (+ ~100 lines of vanilla JS). No build step, no dependencies.
+The pages already point at these files. Until they exist, each photo slot shows a soft blue placeholder
+(the layout does not break). Export them from your Figma file: select the photo layer
+(named "Hotel photograph") → Export → JPG @2x → rename it as below and drop it in this folder.
 
-## Pages (the 5 screens in your Figma file)
+| File | Where it is used | Approx. display size |
+|---|---|---|
+| hero-rooftop-pool.jpg | Home hero (rooftop pool) | 680 × 310 |
+| dest-new-delhi.jpg | Home destination card (India Gate) | 330 × 164 |
+| dest-jaipur.jpg | Home destination card (Hawa Mahal) | 330 × 164 |
+| dest-goa.jpg | Home destination card (beach) | 330 × 164 |
+| dest-varanasi.jpg | Home destination card (ghats) | 330 × 164 |
+| hotel-metropolitan.jpg | Home, search, checkout, confirmation | 400 × 182 |
+| hotel-lemon-tree.jpg | Home, search | 400 × 182 |
+| hotel-claridges.jpg | Home, search | 400 × 182 |
+| metropolitan-gallery-room.jpg | Hotel page, large gallery image | 636 × 338 |
+| metropolitan-gallery-exterior.jpg | Hotel page gallery | 315 × 165 |
+| metropolitan-gallery-lobby.jpg | Hotel page gallery | 315 × 165 |
+| metropolitan-gallery-restaurant.jpg | Hotel page gallery | 315 × 165 |
+| metropolitan-gallery-pool.jpg | Hotel page gallery | 315 × 165 |
+| room-deluxe-king.jpg | Hotel page, Deluxe King Room | 260 × 150 |
+| room-premium-king.jpg | Hotel page, Premium King Room | 260 × 150 |
 
-| File | Screen |
-|---|---|
-| index.html | Home · Hotel search |
-| search.html | Search results · New Delhi |
-| hotel.html | Hotel & room details |
-| checkout.html | Booking summary & payment |
-| confirmation.html | Booking confirmation · Sample |
-
-Flow: Home → Search → Hotel → Checkout → Confirmation (all buttons are linked).
-
-## Run locally
-
-    npx serve .
-
-(or just open index.html in a browser)
-
-## Deploy to Vercel
-
-1. Add your photos to `images/` (see `images/README.md`).
-2. Push this folder to a GitHub repo, then on vercel.com choose **Add New → Project** and import it.
-   Framework Preset: **Other**. Leave Build Command and Output Directory empty. Deploy.
-   – or – from this folder run `npx vercel` (and `npx vercel --prod` for production).
-
-`vercel.json` enables clean URLs, so `/search.html` is served as `/search`.
-
-## Customising
-
-- Colours, spacing and fonts live in `css/styles.css` (design tokens are the `:root` variables at the top).
-- Icons are Lucide icons inlined as an SVG sprite at the top of each page.
-- `js/main.js` handles the payment-method tabs, checkout validation, and the Print / Download Voucher buttons.
-
-This is a front-end demo: nothing is sent to a server and no payment is processed.
+Tip: keep each file under ~200 KB (export at 2x, then compress with squoosh.app) so the site loads fast.
